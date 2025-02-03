@@ -4,89 +4,70 @@ Bank Account: The Account structure holds the account number, holder's name, and
 
 Here are some sample test cases:
 
-Test Case 1
-Input:
+Here are 10 test cases for the bank account program, covering various scenarios, including edge cases and error conditions:
 
-Account Number: 1001
-Account Holder's Name: John Doe
-Choice: 1
-Deposit Amount: 1000.0
-Output:
+Valid Input Cases:
 
-Deposited: 1000.00
-Test Case 2
-Input:
+Normal Deposit and Withdrawal:
 
-Choice: 2
-Withdrawal Amount: 500.0
-Output:
+Account Number: 12345
+Name: John Doe
+Deposit: 1000
+Withdrawal: 500
+Expected Result: Balance should be 500.
+Multiple Deposits and Withdrawals:
 
-Withdrawn: 500.00
-Test Case 3
-Input:
+Account Number: 67890
+Name: Jane Smith
+Deposit: 200, 300, 100
+Withdrawal: 150, 250
+Expected Result: Balance should be 200.
+Zero Deposit:
 
-Choice: 3
-Output:
+Account Number: 13579
+Name: Peter Jones
+Deposit: 0
+Expected Result: Balance should remain 0.
+Withdrawal Equal to Balance:
 
-Account Number: 1001
-Account Holder: John Doe
-Current Balance: 500.00
-Test Case 4
-Input:
+Account Number: 24680
+Name: Alice Johnson
+Deposit: 500
+Withdrawal: 500
+Expected Result: Balance should be 0.
+Display without Transactions:
 
-Choice: 2
-Withdrawal Amount: 700.0
-Output:
+Account Number: 98765
+Name: Bob Williams
+Expected Result: Balance should be 0.
+Invalid Input/Error Cases:
 
-Insufficient balance.
-Test Case 5
-Input:
+Invalid Account Number (Non-numeric):
 
-Choice: 4
-Output:
+Account Number: abcde
+Expected Result: Error message for invalid input.
+Invalid Deposit/Withdrawal Amount (Non-numeric):
 
-Exiting...
-Test Case 6
-Input:
+Deposit: xyz
+Expected Result: Error message for invalid input.
+Insufficient Funds:
 
-Account Number: 2002
-Account Holder's Name: Jane Smith
-Choice: 1
-Deposit Amount: 1500.0
-Output:
+Account Number: 11223
+Name: Eve Davis
+Deposit: 100
+Withdrawal: 200
+Expected Result: "Insufficient balance" message.
+Negative Deposit/Withdrawal:
 
-Deposited: 1500.00
-Test Case 7
-Input:
+Deposit: -100
+Expected Result: Error message for invalid (negative) input.
+Long Name:
 
-Choice: 2
-Withdrawal Amount: 1000.0
-Output:
+Account Number: 55667
+Name: ThisIsAVeryLongNameThatExceedsTheLimit
+Expected Result: The program should handle this gracefully, either truncating the name or displaying an error message (depending on how you've implemented the name input). It should not crash. This tests for buffer overflows.
+How to Use These Test Cases:
 
-Withdrawn: 1000.00
-Test Case 8
-Input:
-
-Choice: 3
-Output:
-
-Account Number: 2002
-Account Holder: Jane Smith
-Current Balance: 500.00
-Test Case 9
-Input:
-
-Choice: 1
-Deposit Amount: 250.0
-Output:
-
-Deposited: 250.00
-Test Case 10
-Input:
-
-Choice: 3
-Output:
-
-Account Number: 2002
-Account Holder: Jane Smith
-Current Balance: 750.00
+Run the program.
+For each test case, provide the input values as specified.
+Verify that the program's output matches the expected result. Pay close attention to error messages and how the program handles invalid input.
